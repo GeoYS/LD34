@@ -1,4 +1,0 @@
-enum InputType
-{
-    DOT, DASH
-};
