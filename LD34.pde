@@ -1,4 +1,4 @@
-/* @pjs preload="/assets/enemy7.png, /assets/mirror.png, /assets/tutorial_boss.png, /assets/tutorial_text.png, /assets/poof_strip.png, /assets/enemy0.png, /assets/enemy1.png, /assets/enemy2.png, /assets/enemy3.png, /assets/enemy4.png, /assets/enemy5.png, /assets/enemy6.png, /assets/menu_background.png, /assets/character_spritesheet.png, /assets/ui.png, /assets/reflector.png, /assets/lose_text.png, /assets/win_text.png, /assets/p1wins_text.png, /assets/p2wins_text.png, /assets/background0.png, /assets/background1.png, /assets/background2.png, /assets/mana_suck.png, /assets/mana_steal.png, /assets/zapper.png, /assets/zap.png, /assets/shield.png, /assets/desert_background.png, /assets/blueFireball.png, /assets/meteor.png, /assets/gravityWell.png, /assets/healthOrb.png, /assets/manaOrb.png, /assets/spinningFireball.png, /assets/piercer.png, /assets/wind.png, /assets/spellOrb.png, /assets/123go.png; */
+/* @pjs preload="/ld34/assets/enemy7.png, /ld34/assets/mirror.png, /ld34/assets/tutorial_boss.png, /ld34/assets/tutorial_text.png, /ld34/assets/poof_strip.png, /ld34/assets/enemy0.png, /ld34/assets/enemy1.png, /ld34/assets/enemy2.png, /ld34/assets/enemy3.png, /ld34/assets/enemy4.png, /ld34/assets/enemy5.png, /ld34/assets/enemy6.png, /ld34/assets/menu_background.png, /ld34/assets/character_spritesheet.png, /ld34/assets/ui.png, /ld34/assets/reflector.png, /ld34/assets/lose_text.png, /ld34/assets/win_text.png, /ld34/assets/p1wins_text.png, /ld34/assets/p2wins_text.png, /ld34/assets/background0.png, /ld34/assets/background1.png, /ld34/assets/background2.png, /ld34/assets/mana_suck.png, /ld34/assets/mana_steal.png, /ld34/assets/zapper.png, /ld34/assets/zap.png, /ld34/assets/shield.png, /ld34/assets/desert_background.png, /ld34/assets/blueFireball.png, /ld34/assets/meteor.png, /ld34/assets/gravityWell.png, /ld34/assets/healthOrb.png, /ld34/assets/manaOrb.png, /ld34/assets/spinningFireball.png, /ld34/assets/piercer.png, /ld34/assets/wind.png, /ld34/assets/spellOrb.png, /ld34/assets/123go.png; */
 
 class Entity {
   // Called when the entity is added to the game
@@ -238,50 +238,50 @@ PImage backgroundImage;
 void setup () {  
   size(1000, 680);
   
-  spellOrbSpritesheet = loadSpriteSheet("/assets/spellOrb.png", 2, 2, 64, 64);  
+  spellOrbSpritesheet = loadSpriteSheet("/ld34/assets/spellOrb.png", 2, 2, 64, 64);  
   dotOrbAnimation = new Animation(spellOrbSpritesheet, 0.25, 2, 3);
   dashOrbAnimation = new Animation(spellOrbSpritesheet, 0.25, 0, 1);
   
-  readySetGoSpritesheet = loadSpriteSheet("/assets/123go.png", 4, 1, 300, 300);  
+  readySetGoSpritesheet = loadSpriteSheet("/ld34/assets/123go.png", 4, 1, 300, 300);  
   
-  userInterface = loadImage("/assets/ui.png");
+  userInterface = loadImage("/ld34/assets/ui.png");
   backgrounds = new PImage[] {
-    loadImage("/assets/background0.png"),
-    loadImage("/assets/background1.png"),
-    loadImage("/assets/background2.png") };
+    loadImage("/ld34/assets/background0.png"),
+    loadImage("/ld34/assets/background1.png"),
+    loadImage("/ld34/assets/background2.png") };
     
   backgroundImage = backgrounds[int(random(backgrounds.length))];
-  menuBackground = loadImage("/assets/menu_background.png");
+  menuBackground = loadImage("/ld34/assets/menu_background.png");
   
-  loseText = loadImage("/assets/lose_text.png");
-  winText = loadImage("/assets/win_text.png");
-  p1WinsText = loadImage("/assets/p1wins_text.png");
-  p2WinsText = loadImage("/assets/p2wins_text.png");
+  loseText = loadImage("/ld34/assets/lose_text.png");
+  winText = loadImage("/ld34/assets/win_text.png");
+  p1WinsText = loadImage("/ld34/assets/p1wins_text.png");
+  p2WinsText = loadImage("/ld34/assets/p2wins_text.png");
   
-  loadAudio("fireball", "/assets/music/fireball2.wav");
-  loadAudio("gravityWell", "/assets/music/gravityWellSFX.ogg");
-  loadAudio("meteor", "/assets/music/meteorSFX.ogg");
-  loadAudio("miniFireball", "/assets/music/miniFireballSFX.ogg");
-  loadAudio("reflector", "/assets/music/reflectorSFX.ogg");
-  loadAudio("shieldBreaker", "/assets/music/shieldBreakerSFX.ogg");
-  loadAudio("shieldDeactivate", "/assets/music/shieldBreakerSFX.ogg");
-  loadAudio("shield", "/assets/music/shieldSFX.ogg");
-  loadAudio("hit", "/assets/music/hit.ogg");
-  loadAudio("orb", "/assets/music/orb.ogg");
-  loadAudio("stun", "/assets/music/stun.ogg");
-  loadAudio("phase", "/assets/music/phase.ogg");
-  loadAudio("music", "/assets/music/ld34.ogg");
-  loadAudio("invoke", "/assets/music/invoke.wav");
-  loadAudio("dot_orb", "/assets/music/dot_orb.wav");
-  loadAudio("meteor", "/assets/music/meteor.wav");
-  loadAudio("summonBlackHole", "/assets/music/summon_black_hole.wav");
-  loadAudio("blackHole", "/assets/music/black_hole.wav");
-  loadAudio("poof", "/assets/music/poof.wav");
-  loadAudio("manaSteal0", "/assets/music/mana_steal_0.wav");
-  loadAudio("manaSteal1", "/assets/music/mana_steal.wav");
-  loadAudio("zappyShoot", "/assets/music/zappy_shoot.wav");
-  loadAudio("piercer", "/assets/music/piercer.wav");
-  loadAudio("rapidFire", "/assets/music/rapid_fire.wav");
+  loadAudio("fireball", "/ld34/assets/music/fireball2.wav");
+  loadAudio("gravityWell", "/ld34/assets/music/gravityWellSFX.ogg");
+  loadAudio("meteor", "/ld34/assets/music/meteorSFX.ogg");
+  loadAudio("miniFireball", "/ld34/assets/music/miniFireballSFX.ogg");
+  loadAudio("reflector", "/ld34/assets/music/reflectorSFX.ogg");
+  loadAudio("shieldBreaker", "/ld34/assets/music/shieldBreakerSFX.ogg");
+  loadAudio("shieldDeactivate", "/ld34/assets/music/shieldBreakerSFX.ogg");
+  loadAudio("shield", "/ld34/assets/music/shieldSFX.ogg");
+  loadAudio("hit", "/ld34/assets/music/hit.ogg");
+  loadAudio("orb", "/ld34/assets/music/orb.ogg");
+  loadAudio("stun", "/ld34/assets/music/stun.ogg");
+  loadAudio("phase", "/ld34/assets/music/phase.ogg");
+  loadAudio("music", "/ld34/assets/music/ld34.ogg");
+  loadAudio("invoke", "/ld34/assets/music/invoke.wav");
+  loadAudio("dot_orb", "/ld34/assets/music/dot_orb.wav");
+  loadAudio("meteor", "/ld34/assets/music/meteor.wav");
+  loadAudio("summonBlackHole", "/ld34/assets/music/summon_black_hole.wav");
+  loadAudio("blackHole", "/ld34/assets/music/black_hole.wav");
+  loadAudio("poof", "/ld34/assets/music/poof.wav");
+  loadAudio("manaSteal0", "/ld34/assets/music/mana_steal_0.wav");
+  loadAudio("manaSteal1", "/ld34/assets/music/mana_steal.wav");
+  loadAudio("zappyShoot", "/ld34/assets/music/zappy_shoot.wav");
+  loadAudio("piercer", "/ld34/assets/music/piercer.wav");
+  loadAudio("rapidFire", "/ld34/assets/music/rapid_fire.wav");
   sounds["music"].loop = true;
   //sounds["music"].play();
   
@@ -750,7 +750,7 @@ class EnemyAlien extends Wizard {
   void create() {
     super.create();
     if (enemyAlienSpritesheet == null) {
-      enemyAlienSpritesheet = loadSpriteSheet("/assets/enemy4.png", 3, 1, 250, 250);
+      enemyAlienSpritesheet = loadSpriteSheet("/ld34/assets/enemy4.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyAlienSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -843,7 +843,7 @@ class EnemyBlob extends Wizard {
   void create() {
     super.create();
     if (enemyBlobSpritesheet == null) {
-      enemyBlobSpritesheet = loadSpriteSheet("/assets/enemy6.png", 3, 1, 250, 250);
+      enemyBlobSpritesheet = loadSpriteSheet("/ld34/assets/enemy6.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyBlobSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -907,7 +907,7 @@ class EnemyEgg extends Wizard {
   void create() {
     super.create();
     if (enemyEggSpritesheet == null) {
-      enemyEggSpritesheet = loadSpriteSheet("/assets/enemy7.png", 5, 1, 250, 250);
+      enemyEggSpritesheet = loadSpriteSheet("/ld34/assets/enemy7.png", 5, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyEggSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1033,7 +1033,7 @@ class EnemyEyeball extends Wizard {
   void create() {
     super.create();
     if (eyeballSpritesheet == null) {
-      eyeballSpritesheet = loadSpriteSheet("/assets/enemy0.png", 3, 1, 250, 250);
+      eyeballSpritesheet = loadSpriteSheet("/ld34/assets/enemy0.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(eyeballSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1131,7 +1131,7 @@ class EnemyFly extends Wizard {
   void create() {
     super.create();
     if (enemyFlySpritesheet == null) {
-      enemyFlySpritesheet = loadSpriteSheet("/assets/enemy2.png", 3, 1, 250, 250);
+      enemyFlySpritesheet = loadSpriteSheet("/ld34/assets/enemy2.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyFlySpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1228,7 +1228,7 @@ class EnemyMirror extends Wizard {
   void create() {
     super.create();
     if (enemyMirrorSpritesheet == null) {
-      enemyMirrorSpritesheet = loadSpriteSheet("/assets/mirror.png", 3, 1, 250, 250);
+      enemyMirrorSpritesheet = loadSpriteSheet("/ld34/assets/mirror.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyMirrorSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1308,7 +1308,7 @@ class EnemySquid extends Wizard {
   void create() {
     super.create();
     if (enemySquidSpriteSheet == null) {
-      enemySquidSpriteSheet = loadSpriteSheet("/assets/enemy3.png", 4, 1, 250, 250);
+      enemySquidSpriteSheet = loadSpriteSheet("/ld34/assets/enemy3.png", 4, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemySquidSpriteSheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1391,7 +1391,7 @@ class EnemyTree extends Wizard {
   void create() {
     super.create();
     if (enemyTreeSpritesheet == null) {
-      enemyTreeSpritesheet = loadSpriteSheet("/assets/enemy5.png", 3, 1, 250, 250);
+      enemyTreeSpritesheet = loadSpriteSheet("/ld34/assets/enemy5.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyTreeSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1541,10 +1541,10 @@ class EnemyTutorial extends Wizard {
   void create() {
     super.create();
     if (enemyScarecrowSheet == null) {
-      enemyScarecrowSheet = loadSpriteSheet("/assets/tutorial_boss.png", 4, 1, 250, 250);
+      enemyScarecrowSheet = loadSpriteSheet("/ld34/assets/tutorial_boss.png", 4, 1, 250, 250);
     }
     if (tutorialTextSheet == null) {
-      tutorialTextSheet = loadSpriteSheet("/assets/tutorial_text.png", 9, 1, 500, 250);
+      tutorialTextSheet = loadSpriteSheet("/ld34/assets/tutorial_text.png", 9, 1, 500, 250);
     }
     
     player1._mana = 0.0f;
@@ -1661,7 +1661,7 @@ class EnemyWizard extends Wizard {
   void create() {
     super.create();
     if (enemyWizardSpriteSheet == null) {
-      enemyWizardSpriteSheet = loadSpriteSheet("/assets/enemy1.png", 3, 1, 250, 250);
+      enemyWizardSpriteSheet = loadSpriteSheet("/ld34/assets/enemy1.png", 3, 1, 250, 250);
     }
     wizardStandingAnimation = new Animation(enemyWizardSpriteSheet, 0.25, 0, 1);
     wizardCastPrepAnimation = wizardStandingAnimation;
@@ -1755,7 +1755,7 @@ class Fireball extends Hazard {
   void create() {
     super.create();
     if (fireballSpritesheet == null) {
-      fireballSpritesheet = loadSpriteSheet("/assets/blueFireball.png", 4, 1, 150, 150);
+      fireballSpritesheet = loadSpriteSheet("/ld34/assets/blueFireball.png", 4, 1, 150, 150);
     }
     playSound("fireball");
     fireballAnimation = new Animation(fireballSpritesheet, 0.05, 0, 1, 2, 3);
@@ -1849,7 +1849,7 @@ class GravityWell extends Collider {
   void create() {
     super.create();
     if (gravityWellSpritesheet == null) {
-      gravityWellSpritesheet = loadSpriteSheet("/assets/gravityWell.png", 2, 1, 150, 150);
+      gravityWellSpritesheet = loadSpriteSheet("/ld34/assets/gravityWell.png", 2, 1, 150, 150);
     }
     gravityWellAnimation = new Animation(gravityWellSpritesheet, 0.25, 0, 1);
     //playSound("summonBlackHole");
@@ -2054,7 +2054,7 @@ class GustParticle extends Moving {
   void create() {
     super.create();
     if (windSpritesheet == null) {
-      windSpritesheet = loadSpriteSheet("/assets/wind.png", 4, 1, 240, 240);
+      windSpritesheet = loadSpriteSheet("/ld34/assets/wind.png", 4, 1, 240, 240);
     }
     windAnimation = new Animation(windSpritesheet, LIFETIME/4, 0, 1, 2, 3);
   }
@@ -2187,7 +2187,7 @@ class HealthOrb extends Collider{
   void create() {
     super.create();
     if (healthOrbSpritesheet == null) {
-      healthOrbSpritesheet = loadSpriteSheet("/assets/healthOrb.png", 2, 1, 60, 60);
+      healthOrbSpritesheet = loadSpriteSheet("/ld34/assets/healthOrb.png", 2, 1, 60, 60);
     }
     healthOrbAnimation = new Animation(healthOrbSpritesheet, 0.5, 0, 1);
   }
@@ -2272,7 +2272,7 @@ class HighFireball extends Hazard {
   void create() {
     super.create();
     if (spinningFireballSpritesheet == null) {
-      spinningFireballSpritesheet = loadSpriteSheet("/assets/spinningFireball.png", 4, 1, 60, 60);
+      spinningFireballSpritesheet = loadSpriteSheet("/ld34/assets/spinningFireball.png", 4, 1, 60, 60);
     }
     playSound("fireball");
     spinningFireballAnimation = new Animation(spinningFireballSpritesheet, 0.1, 0, 1, 2, 3);
@@ -2486,7 +2486,7 @@ class ManaOrb extends Collider{
   void create() {
     super.create();
     if (manaOrbSpritesheet == null) {
-      manaOrbSpritesheet = loadSpriteSheet("/assets/manaOrb.png", 2, 1, 60, 60);
+      manaOrbSpritesheet = loadSpriteSheet("/ld34/assets/manaOrb.png", 2, 1, 60, 60);
     }
     manaOrbAnimation = new Animation(manaOrbSpritesheet, 0.5, 0, 1);
   }
@@ -2559,12 +2559,12 @@ class ManaSucker extends Summon {
     super(x_, y_, 32.0f, 0.0f, 1.0f);
     
     if (suckerShotSpritesheet == null) {
-      manaSuckerSpritesheet = loadSpriteSheet("/assets/mana_suck.png", 3, 1, 200, 200);
+      manaSuckerSpritesheet = loadSpriteSheet("/ld34/assets/mana_suck.png", 3, 1, 200, 200);
     }
     manaSuckerAnimation = new Animation(manaSuckerSpritesheet, 0.15, 0, 1, 2);
     
     if (manaBeamSpritesheet == null) {
-      manaBeamSpritesheet = loadSpriteSheet("/assets/mana_steal.png", 2, 1, 600, 400);
+      manaBeamSpritesheet = loadSpriteSheet("/ld34/assets/mana_steal.png", 2, 1, 600, 400);
     }
     manaBeamAnimation = new Animation(manaBeamSpritesheet, 0.15, 0, 1);
     
@@ -2694,7 +2694,7 @@ class ManaSuckerShot extends Collider {
   void create() {
     super.create();
     if (suckerShotSpritesheet == null) {
-      suckerShotSpritesheet = loadSpriteSheet("/assets/manaOrb.png", 2, 1, 60, 60);
+      suckerShotSpritesheet = loadSpriteSheet("/ld34/assets/manaOrb.png", 2, 1, 60, 60);
     }
     suckerShotAnimation = new Animation(suckerShotSpritesheet, 0.05, 0, 1);
     playSound("manaSteal0");
@@ -2837,7 +2837,7 @@ class Meteor extends Hazard {
   void create() {
     super.create();
     if (meteorSpritesheet == null) {
-      meteorSpritesheet = loadSpriteSheet("/assets/meteor.png", 2, 1, 250, 250);
+      meteorSpritesheet = loadSpriteSheet("/ld34/assets/meteor.png", 2, 1, 250, 250);
     }
     playSound("meteor");
     meteorAnimation = new Animation(meteorSpritesheet, 0.25, 0, 1);
@@ -2992,7 +2992,7 @@ class Piercer extends Hazard {
   void create() {
     super.create();
     if (piercerSpritesheet == null) {
-      piercerSpritesheet = loadSpriteSheet("/assets/piercer.png", 4, 1, 120, 120);
+      piercerSpritesheet = loadSpriteSheet("/ld34/assets/piercer.png", 4, 1, 120, 120);
     }
     playSound("piercer");
     piercerAnimation = new Animation(piercerSpritesheet, 0.3, 0, 1);
@@ -3087,7 +3087,7 @@ class Poof extends Moving {
   void create() {
     super.create();
     if (poofSpriteSheet == null) {
-      poofSpriteSheet = loadSpriteSheet("/assets/poof_strip.png", 3, 1, 128, 128);
+      poofSpriteSheet = loadSpriteSheet("/ld34/assets/poof_strip.png", 3, 1, 128, 128);
     }
     animation = new Animation(poofSpriteSheet, 0.05, 0, 1, 2);
     playSound("poof");
@@ -3144,7 +3144,7 @@ class RapidShot extends Hazard {
   void create() {
     super.create();
     if (rapidShotSpritesheet == null) {
-      rapidShotSpritesheet = loadSpriteSheet("/assets/blueFireball.png", 4, 1, 150, 150);
+      rapidShotSpritesheet = loadSpriteSheet("/ld34/assets/blueFireball.png", 4, 1, 150, 150);
     }
     rapidShotAnimation = new Animation(rapidShotSpritesheet, 0.05, 0, 1, 2, 3);
     playSound("rapidFire");
@@ -3278,7 +3278,7 @@ class Reflector extends Hazard {
     super(x_, y_, initialRadius, 20.0, 10.0, owner);
     
     if (reflectorSpritesheet == null) {
-      reflectorSpritesheet = loadSpriteSheet("/assets/reflector.png", 4, 1, 400, 400);
+      reflectorSpritesheet = loadSpriteSheet("/ld34/assets/reflector.png", 4, 1, 400, 400);
     }
     reflectorAnimation = new Animation(reflectorSpritesheet, 0.3, 0, 1, 2, 3);
     
@@ -3400,7 +3400,7 @@ class Shield extends Hazard {
   void create() {
     super.create();
     if (shieldSpritesheet == null) {
-      shieldSpritesheet = loadSpriteSheet("/assets/shield.png", 4, 1, 400, 400);
+      shieldSpritesheet = loadSpriteSheet("/ld34/assets/shield.png", 4, 1, 400, 400);
     }
     shieldAnimation = new Animation(shieldSpritesheet, 0.2, 0, 1, 2, 3);
   }
@@ -3647,7 +3647,7 @@ class Wizard extends Collider{
   void create() {
     super.create();
     if (characterSpritesheet == null) {
-      characterSpritesheet = loadSpriteSheet("/assets/character_spritesheet.png", 5, 5, 250, 250);
+      characterSpritesheet = loadSpriteSheet("/ld34/assets/character_spritesheet.png", 5, 5, 250, 250);
     }
     wizardStandingAnimation = new Animation(characterSpritesheet, 0.25, 0, 1);
     wizardCastPrepAnimation = new Animation(characterSpritesheet, 0.2, 2);
@@ -3864,7 +3864,7 @@ class ZappyOrb extends Summon {
     super(x_, y_, 32.0f, 0.0f, 1.0f);
     
     if (zappySpritesheet == null) {
-      zappySpritesheet = loadSpriteSheet("/assets/zapper.png", 3, 1, 200, 200);
+      zappySpritesheet = loadSpriteSheet("/ld34/assets/zapper.png", 3, 1, 200, 200);
     }
     zappyAnimation = new Animation(zappySpritesheet, 0.2, 0, 1, 2);
     
@@ -3991,7 +3991,7 @@ class ZappyShot extends Hazard {
   void create() {
     super.create();
     if (zappyShotSpritesheet == null) {
-      zappyShotSpritesheet = loadSpriteSheet("/assets/zap.png", 2, 1, 50, 50);
+      zappyShotSpritesheet = loadSpriteSheet("/ld34/assets/zap.png", 2, 1, 50, 50);
     }
     zappyShotAnimation = new Animation(zappyShotSpritesheet, 0.02, 0, 1);
     playSound("zappyShoot");
