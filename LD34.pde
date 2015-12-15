@@ -270,7 +270,7 @@ void setup () {
   loadAudio("orb", "/LD34/assets/music/orb.ogg");
   loadAudio("stun", "/LD34/assets/music/stun.ogg");
   loadAudio("phase", "/LD34/assets/music/phase.ogg");
-  loadAudio("music", "/LD34/assets/music/LD34.ogg");
+  loadAudio("music", "/LD34/assets/music/ld34.ogg");
   loadAudio("invoke", "/LD34/assets/music/invoke.wav");
   loadAudio("dot_orb", "/LD34/assets/music/dot_orb.wav");
   loadAudio("meteor", "/LD34/assets/music/meteor.wav");
@@ -795,7 +795,7 @@ class EnemyAlien extends Wizard {
       for (Entity entity : entities) {
         if (entity instanceof Fireball || entity instanceof RapidShot) {
           if (entity.velocityX > 0) {
-            if (random(1) > 0.85 && shieldSpell.getManaCost() < this._mana) {
+            if (random(1) > 0.75 && shieldSpell.getManaCost() < this._mana) {
               shieldSpell.invoke(this);
               this._mana -= shieldSpell.getManaCost();
               break;
@@ -822,8 +822,8 @@ class EnemyAlien extends Wizard {
   }
   
   
-  float shieldTimer = 0;
-  float lastSpellTime = 0;
+  float shieldTimer = 3;
+  float lastSpellTime = 3;
   FireballSpell fireballSpell;
   RapidShotSpell rapidShotSpell;
   ShieldSpell shieldSpell;
@@ -939,14 +939,14 @@ class EnemyEgg extends Wizard {
     
     if (eggMode) {
       //EGG MODE
-      if (shieldTimer > 4) {
+      if (shieldTimer > 3.5) {
         shieldTimer = 0;
         boolean hasShield = false;
-        for (Entity entity : entities) {
-          if (entity.owner == player2 && entity instanceof Shield) {
-            hasShield = true;
-          }
-        }
+//        for (Entity entity : entities) {
+//          if (entity.owner == player2 && entity instanceof Shield) {
+//            hasShield = true;
+//          }
+//        }
         if (!hasShield && _mana > shieldSpell.getManaCost()) {
           shieldSpell.invoke(this);
           _mana -= shieldSpell.getManaCost();
